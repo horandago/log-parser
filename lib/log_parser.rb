@@ -16,7 +16,7 @@ end
 def choose_log(choice)
 	$data.each_pair { |key, value| $result = value if key == choice }
 	puts $result
-	end
+end
 
 ###Press any key to continue method###
 def continue
@@ -60,11 +60,6 @@ choice = gets.chomp.downcase
 choose_log(choice)
 system("tail #{$result}")
 
-=begin
-	case choice
-		when "auth" then system("#{$result}")
-		when "nginx" then system('tail /var/log/nginx/nginx.log')
-	end
-=end
 continue
 end
+###End of Loop###
